@@ -2,38 +2,37 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the process of converting a Context-Free Grammar (CFG) into a Non-Deterministic Pushdown Automaton (NPDA)?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Parsing",
+        "b": "Lexing",
+        "c": "Compiling",
+        "d": "Conversion"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "In the conversion from CFG to NPDA, what type of automaton is NPDA?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Deterministic Finite Automaton (DFA)",
+        "b": "Non-Deterministic Finite Automaton (NFA)",
+        "c": "Deterministic Pushdown Automaton (DPDA)",
+        "d": "Non-Deterministic Pushdown Automaton (NPDA)"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "When converting CFG to NPDA, what elements of CFG correspond to the stack operations in NPDA?",
+      "answers": {
+        "a": "Terminals",
+        "b": "Non-terminals",
+        "c": "Productions",
+        "d": "Variables"
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     }
   ]
 }
