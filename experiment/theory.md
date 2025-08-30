@@ -17,7 +17,6 @@ When the CFG is expressed in **Greibach Normal Form (GNF)**, the conversion proc
 
 - This structure ensures that every derivation step begins with a terminal, allowing the NPDA to consume one input symbol while manipulating the stack.  
 
----
 
 #### Conversion of CFG (GNF) → NPDA  
 
