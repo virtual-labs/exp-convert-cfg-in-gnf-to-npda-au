@@ -1,20 +1,41 @@
-### Theory
+### Theory  
 
-A pushdown automaton (PDA) is a finite automaton with a stack for memory purposes. A nondeterministic pushdown automaton (NPDA) has one, or more than one, transition for each input that it reads.
-A context-free grammar (CFG) is the generator of a language, whereas a PDA and NPDA are the recognizers of a non-regular language.
-To convert a CFG to an NPDA, we follow these steps:
-  <ul>
-    <li>
-      <strong>Step 1:</strong> The stack is initially empty. Make the first transition as <code>&epsilon;, &epsilon; → Γ</code>. Before reading or popping the CFG, push the start variable on the stack.
-    </li>
-    <li>
-      <strong>Step 2:</strong> Read nothing from the CFG in case of the start variable, pop it from the top of the stack, and push all the productions that the start variable produces. In the same step, read all the inputs of the CFG, pop, and push from the top of the stack according to the grammar rules mentioned in the CFG. This step transitions into a self-loop until all productions are read, popped, and pushed according to the CFG.
-    </li>
-    <li>
-      <strong>Step 3:</strong> When there are no more productions to be read as input, pop the <code>Γ</code> symbol and push nothing. Make the last state the final state.
-    </li>
-<li> <strong>Step 4:</strong>
-symbol and push nothing. Make the last   When there are no more productions to be read as input, pop the &Gamma;
-state the final state. 
-    </li>
-  </ul>
+A **Nondeterministic Pushdown Automaton (NPDA)** is a computational model that extends a finite automaton with a stack, giving it the ability to recognize **context-free languages (CFLs)**.  
+
+A **Context-Free Grammar (CFG)** is a formal grammar that generates CFLs, whereas an NPDA recognizes them. Since both CFGs and NPDAs describe the same class of languages, any CFG can be systematically converted into an equivalent NPDA.  
+
+When the CFG is expressed in **Greibach Normal Form (GNF)**, the conversion process to NPDA becomes straightforward:  
+
+- In **GNF**, every production is of the form:  
+  \[
+  A \rightarrow a\alpha
+  \]  
+  where:  
+  - `A` is a variable (nonterminal),  
+  - `a` is a terminal,  
+  - `α` is a (possibly empty) string of variables.  
+
+- This structure ensures that every derivation step begins with a terminal, allowing the NPDA to consume one input symbol while manipulating the stack.  
+
+---
+
+#### Conversion of CFG (GNF) → NPDA  
+
+To construct an NPDA \( M \) from a CFG \( G = (V, Σ, R, S) \):  
+
+1. **Initialization**  
+   - Start in the initial state `q0`.  
+   - Push the start variable `S` onto the stack.  
+
+2. **Variable Expansion**  
+   - If the top of the stack is a variable `A`, and there exists a production `A → aα`:  
+     - On reading terminal `a`, pop `A` from the stack.  
+     - Push the string `α` (with the rightmost symbol on top).  
+
+3. **Terminal Matching**  
+   - If the top of the stack is a terminal `a` and the current input symbol is also `a`:  
+     - Consume `a` from the input.  
+     - Pop `a` from the stack.  
+
+4. **Acceptance**  
+   - The NPDA accepts the input if the entire string is read and the stack becomes empty.  
