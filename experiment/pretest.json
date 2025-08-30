@@ -10,10 +10,10 @@
         "d": "Conversion"
       },
       "correctAnswer": "d",
-      "difficulty": "intermediate"
+      "difficulty": "easy"
     },
     {
-      "question": "In the conversion from CFG to NPDA, what type of automaton is NPDA?",
+      "question": "In the conversion from CFG to NPDA, what type of automaton is an NPDA?",
       "answers": {
         "a": "Deterministic Finite Automaton (DFA)",
         "b": "Non-Deterministic Finite Automaton (NFA)",
@@ -21,17 +21,50 @@
         "d": "Non-Deterministic Pushdown Automaton (NPDA)"
       },
       "correctAnswer": "d",
-      "difficulty": "intermediate"
+      "difficulty": "easy"
     },
     {
-      "question": "When converting CFG to NPDA, what elements of CFG correspond to the stack operations in NPDA?",
+      "question": "When converting a CFG to an NPDA, which CFG element is simulated by stack operations (e.g., ε-moves that replace a symbol on the stack)?",
       "answers": {
         "a": "Terminals",
         "b": "Non-terminals",
-        "c": "Productions",
-        "d": "Variables"
+        "c": "Productions (grammar rules)",
+        "d": "Start symbol only"
       },
       "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "During NPDA initialization for CFG simulation, what is typically pushed onto the stack first?",
+      "answers": {
+        "a": "The entire input string",
+        "b": "A bottom marker (Γ) followed by the start variable S",
+        "c": "All production rules",
+        "d": "Nothing (stack remains empty)"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which normal form for CFGs ensures every production begins with a terminal and thus makes direct CFG→NPDA construction straightforward?",
+      "answers": {
+        "a": "Chomsky Normal Form (CNF)",
+        "b": "Greibach Normal Form (GNF)",
+        "c": "Backus–Naur Form (BNF)",
+        "d": "Extended Backus–Naur Form (EBNF)"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following languages is context-free and can be recognized by an NPDA but cannot be recognized by any finite automaton?",
+      "answers": {
+        "a": "The set of all strings over {a,b} ( (a+b)* )",
+        "b": "The language { a^n b^n | n ≥ 0 }",
+        "c": "Any finite language",
+        "d": "The set of all binary strings with an even number of bits"
+      },
+      "correctAnswer": "b",
       "difficulty": "intermediate"
     }
   ]
