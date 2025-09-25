@@ -21,6 +21,6 @@
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
 1 | Dr. Priyanka Kumar | Faculty |Computer Science and Engineering| Amrita Vishwa Vidyapeetham | k_priyanka@cb.amrita.edu	
-2 | Anandi  | Faculty |Center for Cyber Security Systems and Networks | Amrita Vishwa Vidyapeetham | anandik@am.amirta.edu
+2 | Anandi K | Faculty |Center for Cyber Security Systems and Networks | Amrita Vishwa Vidyapeetham | anandik@am.amirta.edu
 3 | Pavithra S P  |Faculty | Center for Cyber Security Systems and Networks |Amrita Vishwa Vidyapeetham | pavithrasp@am.amrita.edu
 4 |RahulGiri | Faculty | Center for Cyber Security Systems and Networks| Amrita Vishwa Vidyapeetham |rahulgiri@am.amrita.edu	
