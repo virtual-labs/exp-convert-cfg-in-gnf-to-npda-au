@@ -3,8 +3,8 @@
 
 <b>Discipline | <b>Computer Science and Engineering
 :--|:--|
-<b> Lab | <b>Convert CFG in GNF to NPDA
-<b> Experiment|     <b>
+<b> Lab | <b>Formal Language Automata
+<b> Experiment|  Convert CFG in GNF to NPDA   <b>
 
 ### About the Experiment 
 
