@@ -1,4 +1,3 @@
-### Theory  
 
 A **Nondeterministic Pushdown Automaton (NPDA)** is a computational model that extends a finite automaton with a stack, giving it the ability to recognize **context-free languages (CFLs)**.  
 

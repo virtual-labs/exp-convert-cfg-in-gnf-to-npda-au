@@ -1,4 +1,3 @@
-### References
 
 1. Wikipedia, "Pushdown Automaton" — a finite automaton with an auxiliary stack that recognizes context-free languages.  
    [https://en.wikipedia.org/wiki/Pushdown_automaton](https://en.wikipedia.org/wiki/Pushdown_automaton)  

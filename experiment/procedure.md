@@ -1,4 +1,3 @@
-### Procedure
 
 #### Step 1 — Select Grammar
 - Click the Start button to begin the simulation.
