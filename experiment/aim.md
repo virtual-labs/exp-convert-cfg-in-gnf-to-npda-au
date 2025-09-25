@@ -1,4 +1,3 @@
-### Aim of the Experiment  
 
 The aim of this experiment is to demonstrate how a **Context-Free Grammar (CFG)** in **Greibach Normal Form (GNF)** can be converted into an equivalent **Non-Deterministic Pushdown Automaton (NPDA)**.  
 
