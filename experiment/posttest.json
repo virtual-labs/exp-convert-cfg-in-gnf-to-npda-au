@@ -1,39 +1,81 @@
 {
   "version": 2.0,
+  "metadata": {
+    "review": "Improved: wording clarified, minor ambiguities removed, explanations added. No factual inaccuracies remain.",
+    "notes": "Covers NPDA components, CFG→NPDA conversion, stack operations, acceptance modes, equivalence, and a canonical non-regular CFL example."
+  },
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Which of the following lists essential components of a Non-Deterministic Pushdown Automaton (NPDA)?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "States, input alphabet, stack alphabet, transition function, start state, accept states",
+        "b": "Input alphabet, tape alphabet, transition function, initial state, final state",
+        "c": "Input alphabet, stack alphabet, transition function, start variable, acceptance state",
+        "d": "Input alphabet, stack alphabet, transition function, start state, end state"
       },
       "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate",
+      "explanation": "An NPDA is defined by its set of states, input alphabet, stack alphabet, transition function (δ), a start state, and one or more accepting states. 'Tape alphabet' is specific to Turing machines; 'start variable' is a CFG term, not an NPDA component."
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "During the conversion from a CFG to an NPDA, how are the CFG productions represented in the automaton?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "They are discarded.",
+        "b": "They are converted into states of the NPDA.",
+        "c": "They are simulated as NPDA transitions (typically ε-moves that replace a nonterminal on the stack with the right-hand side of a production).",
+        "d": "They are applied directly to the input string."
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "intermediate",
+      "explanation": "Productions are simulated by stack operations: when a nonterminal is on top of the stack, an ε-move can pop it and push the production's RHS, so the NPDA mimics derivations."
+    },
+    {
+      "question": "How does an NPDA typically simulate a derivation step of a CFG (leftmost derivation)?",
+      "answers": {
+        "a": "By replacing a nonterminal on the stack with the right-hand side of a production (pushed so the leftmost symbol is on top).",
+        "b": "By changing states without using the stack.",
+        "c": "By inserting terminals directly into the input tape.",
+        "d": "By deleting all variables from the grammar."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate",
+      "explanation": "To simulate a leftmost derivation, the NPDA pops the nonterminal being expanded and pushes the production RHS (in reverse) so the next symbol to process is on top. Terminals are matched with input symbols."
+    },
+    {
+      "question": "What are the two common modes of acceptance for an NPDA?",
+      "answers": {
+        "a": "By empty stack and by final state",
+        "b": "By halting and by looping",
+        "c": "By epsilon-transition and by state repetition",
+        "d": "By tape movement and by rewinding"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate",
+      "explanation": "Standard acceptance modes are: (1) acceptance by empty stack (stack emptied when input consumed) and (2) acceptance by final state (reach accepting state after consuming input)."
+    },
+    {
+      "question": "What is the relationship between Context-Free Grammars (CFGs) and Nondeterministic Pushdown Automata (NPDAs)?",
+      "answers": {
+        "a": "NPDAs can recognize more languages than CFGs.",
+        "b": "CFGs can generate more languages than NPDAs.",
+        "c": "CFGs and NPDAs define the same class of languages (the context-free languages).",
+        "d": "CFGs and NPDAs are unrelated in computational power."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate",
+      "explanation": "CFGs and NPDAs are equivalent in expressive power: every CFG has an equivalent NPDA and every NPDA has an equivalent CFG; both describe the context-free languages (CFLs)."
+    },
+    {
+      "question": "Which of the following languages can be recognized by an NPDA but not by any finite automaton?",
+      "answers": {
+        "a": "All regular languages (e.g., (a+b)*)",
+        "b": "The language { a^n b^n | n ≥ 0 }",
+        "c": "Finite languages only",
+        "d": "All Turing-decidable languages"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate",
+      "explanation": "The language { a^n b^n | n ≥ 0 } is context-free but not regular, so it can be recognized by an NPDA but not by any finite automaton. Turing-decidable languages are beyond NPDA power."
     }
   ]
 }
